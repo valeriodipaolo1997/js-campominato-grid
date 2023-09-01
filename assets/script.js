@@ -21,12 +21,28 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro
  function generatecell(element, max) {
  
      for (let i = 1; i <= max; i++) {
-         const markupCell = `<div class="square bg-warning"></div>`;
+        
+        const squareEl = document.createElement('div');
+
+        squareEl.className = 'square bg-warning';
+        element.append(squareEl);
+
+        squareEl.id = `${i}`
+
+        squareEl.addEventListener('click', () => {
+
+            squareEl.classList.toggle('bg-warning')
+            
+            squareEl.classList.toggle('bg-danger')
+        
+            //stampo in console il numero della cella cliccata
+            console.log(squareEl.id);
+
+        })
+        
+    }
+    
+}
  
-         element.insertAdjacentHTML('beforeend', markupCell)
  
-         console.log(markupCell);
  
-     }
- 
- }
