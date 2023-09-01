@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+}
+
+.square {
+    width: calc(10% - 0.5rem);
+    aspect-ratio: 1 / 1;
+    
+}
