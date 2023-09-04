@@ -29,7 +29,7 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro
 
         squareEl.id = `${i}`
 
-        squareEl.addEventListener('click', () => {
+        squareEl.addEventListener('click', function() {
 
             squareEl.classList.toggle('bg-warning')
             
